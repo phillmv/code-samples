@@ -1,4 +1,4 @@
-# AUCS CLI Guide's samples
+# Carmel extended CLI navigation samples
 
 Samples in this folder, are functional equivalent of the original **[Aurelia skeleton navigation](https://github.com/aurelia/skeleton-navigation)** set, without the two aspnetcore based samples which appear in the **[Carmel Full-stack samples](https://github.com/longarone/Carmel/tree/master/full-stack)** collection.
 
