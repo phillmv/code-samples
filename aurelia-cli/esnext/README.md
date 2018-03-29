@@ -1,6 +1,6 @@
 # Carmel esnext-skeleton-navigation
 
-This sample is the equivalent of the **[aurelia-skeleton-navigation](https://github.com/aurelia/skeleton-navigation/tree/master/skeleton-esnext#aurelia-skeleton-navigation)** sample, created to fit the Aurelia CLI build system. Please follow the **[Aurelia CLI](http://aurelia.io/docs/build-systems/aurelia-cli)** guide to get all of the prerequisites for this build system installed.
+This sample is the equivalent of the **[aurelia-skeleton-navigation](https://github.com/aurelia/skeleton-navigation/tree/master/skeleton-esnext#aurelia-skeleton-navigation)** sample, created with the the Aurelia CLI build system. Please follow the **[Aurelia CLI](http://aurelia.io/docs/build-systems/aurelia-cli)** guide to get all of the prerequisites for this build system installed.
 
 ### Running The App
 
