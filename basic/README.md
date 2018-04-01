@@ -7,6 +7,8 @@ Samples in this folder, are functional equivalent of the original **[Aurelia ske
 - **[esnext webpack](https://github.com/longarone/code-samples/tree/master/aurelia-cli/esnext-webpack)**
 - **[typescript](https://github.com/longarone/code-samples/tree/master/aurelia-cli/typescript)**
 - **[typescript-webpack](https://github.com/longarone/code-samples/tree/master/aurelia-cli/typescript-webpack)**
+***
+- **[basic blog](https://github.com/longarone/code-samples/tree/master/basic/basic-blog)** sample is contributed by @nickshallee and it represents the start code for the whole **aurelia blog series** of distributed sample applications, used in the **[full-stack](https://github.com/longarone/code-samples/tree/master/full-stack)** and **[identity management](https://github.com/longarone/code-samples/tree/master/identity-management)** categories .
 
 All of these samples are built with the **[Aurelia CLI](http://aurelia.io/docs/build-systems/aurelia-cli)** build system.
 
