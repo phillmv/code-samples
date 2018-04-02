@@ -1,4 +1,4 @@
-# Carmel basic aka navigation samples
+# Carmel basic (aka navigation) samples
 
 First four samples in this folder (as listed below), are functional equivalents of the original **[Aurelia skeleton navigation](https://github.com/aurelia/skeleton-navigation)** set
 
