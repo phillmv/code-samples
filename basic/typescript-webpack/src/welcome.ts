@@ -1,6 +1,6 @@
 import {computedFrom} from 'aurelia-framework';
 export class Welcome {
-  heading: string = 'Welcome to the AUCS Typescript Webpack Navigation App';
+  heading: string = 'Welcome to the Carmel Typescript Webpack Navigation App';
   firstName: string = 'John';
   lastName: string = 'Doe';
   previousValue: string = this.fullName;
