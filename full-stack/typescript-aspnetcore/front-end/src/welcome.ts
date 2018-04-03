@@ -1,7 +1,7 @@
 // import {computedFrom} from 'aurelia-framework';
 
 export class Welcome {
-  public heading = 'Welcome to the AUCS Full-Stack Front-End App!';
+  public heading = 'Welcome to the Carmel full-stack typescript front-end app!';
   public firstName = 'John';
   public lastName = 'Doe';
   private previousValue = this.fullName;
