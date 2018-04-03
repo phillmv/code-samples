@@ -4,7 +4,8 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const project = require('./aurelia_project/aurelia.json');
 const { AureliaPlugin, ModuleDependenciesPlugin } = require('aurelia-webpack-plugin');
-const { optimize: { CommonsChunkPlugin, UglifyJsPlugin }, ProvidePlugin } = require('webpack');
+const { ProvidePlugin } = require('webpack');
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 // config helpers:
 const ensureArray = (config) => config && (Array.isArray(config) ? config : [config]) || [];
@@ -22,7 +23,7 @@ const cssRules = [
   { loader: 'css-loader' },
 ];
 
-module.exports = ({production, server, extractCss, coverage} = {}) => ({
+module.exports = ({production, server, extractCss, coverage, analyze} = {}) => ({
   resolve: {
     extensions: ['.js'],
     modules: [srcDir, 'node_modules'],
@@ -31,6 +32,7 @@ module.exports = ({production, server, extractCss, coverage} = {}) => ({
     app: ['aurelia-bootstrapper'],
     vendor: ['bluebird','jquery','bootstrap'],
   },
+  mode: production ? 'production' : 'development',
   output: {
     path: outDir,
     publicPath: baseUrl,
@@ -38,6 +40,7 @@ module.exports = ({production, server, extractCss, coverage} = {}) => ({
     sourceMapFilename: production ? '[name].[chunkhash].bundle.map' : '[name].[hash].bundle.map',
     chunkFilename: production ? '[name].[chunkhash].chunk.js' : '[name].[hash].chunk.js'
   },
+  performance: { hints: false },
   devServer: {
     contentBase: outDir,
     // serve index.html for all 404 (required for push-state)
@@ -104,14 +107,8 @@ module.exports = ({production, server, extractCss, coverage} = {}) => ({
       filename: production ? '[contenthash].css' : '[id].css',
       allChunks: true
     })),
-    ...when(production, new CommonsChunkPlugin({
-      name: ['common']
-    })),
     ...when(production, new CopyWebpackPlugin([
-      { from: 'static/favicon.ico', to: 'favicon.ico' }
-    ])),
-    ...when(production, new UglifyJsPlugin({
-      sourceMap: true
-    }))
+      { from: 'static/favicon.ico', to: 'favicon.ico' }])),
+    ...when(analyze, new BundleAnalyzerPlugin())
   ]
 });

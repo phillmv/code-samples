@@ -1,9 +1,9 @@
 {
-  "name": "skeleton-typescript-webpack-cli",
+  "name": "typescript-webpack",
   "type": "project:application",
   "bundler": {
     "id": "webpack",
-    "displayName": "Skeleton Typescript Webpack CLI"
+    "displayName": "Webpack"
   },
   "build": {
     "options": {
@@ -45,13 +45,13 @@
   },
   "unitTestRunner": [
     {
-      "id": "karma",
-      "displayName": "Karma"
+      "id": "jest",
+      "displayName": "Jest"
     }
   ],
   "integrationTestRunner": {
-    "id": "none",
-    "displayName": "None"
+    "id": "protractor",
+    "displayName": "Protractor"
   },
   "paths": {
     "root": "src",

@@ -1,9 +1,9 @@
 {
-  "name": "skeleton-esnext-webpack-cli",
+  "name": "aurelia-app",
   "type": "project:application",
   "bundler": {
     "id": "webpack",
-    "displayName": "Skeleton ESnext Webpack CLI"
+    "displayName": "Webpack"
   },
   "build": {
     "options": {
@@ -50,13 +50,13 @@
   },
   "unitTestRunner": [
     {
-      "id": "karma",
-      "displayName": "Karma"
+      "id": "jest",
+      "displayName": "Jest"
     }
   ],
   "integrationTestRunner": {
-    "id": "none",
-    "displayName": "None"
+    "id": "protractor",
+    "displayName": "Protractor"
   },
   "paths": {
     "root": "src",

@@ -1,7 +1,7 @@
 //import {computedFrom} from 'aurelia-framework';
 
 export class Welcome {
-  heading = 'Welcome to the AUCS ESNext Webpack Navigation App';
+  heading = 'Welcome to the Carmel ESNext Webpack Navigation App';
   firstName = 'John';
   lastName = 'Doe';
   previousValue = this.fullName;

@@ -4,8 +4,8 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const project = require('./aurelia_project/aurelia.json');
 const { AureliaPlugin, ModuleDependenciesPlugin } = require('aurelia-webpack-plugin');
-const { optimize: { CommonsChunkPlugin, UglifyJsPlugin }, ProvidePlugin } = require('webpack');
-const { TsConfigPathsPlugin, CheckerPlugin } = require('awesome-typescript-loader');
+const { ProvidePlugin } = require('webpack');
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 // config helpers:
 const ensureArray = (config) => config && (Array.isArray(config) ? config : [config]) || [];
@@ -23,7 +23,7 @@ const cssRules = [
   { loader: 'css-loader' },
 ];
 
-module.exports = ({production, server, extractCss, coverage} = {}) => ({
+module.exports = ({production, server, extractCss, coverage, analyze} = {}) => ({
   resolve: {
     extensions: ['.ts', '.js'],
     modules: [srcDir, 'node_modules'],
@@ -32,6 +32,7 @@ module.exports = ({production, server, extractCss, coverage} = {}) => ({
     app: ['aurelia-bootstrapper'],
     vendor: ['bluebird','jquery','bootstrap'],
   },
+  mode: production ? 'production' : 'development',
   output: {
     path: outDir,
     publicPath: baseUrl,
@@ -39,6 +40,7 @@ module.exports = ({production, server, extractCss, coverage} = {}) => ({
     sourceMapFilename: production ? '[name].[chunkhash].bundle.map' : '[name].[hash].bundle.map',
     chunkFilename: production ? '[name].[chunkhash].chunk.js' : '[name].[hash].chunk.js'
   },
+  performance: { hints: false },
   devServer: {
     contentBase: outDir,
     // serve index.html for all 404 (required for push-state)
@@ -65,7 +67,7 @@ module.exports = ({production, server, extractCss, coverage} = {}) => ({
         use: cssRules
       },
       { test: /\.html$/i, loader: 'html-loader' },
-      { test: /\.ts$/i, loader: 'awesome-typescript-loader', exclude: nodeModulesDir },
+      { test: /\.tsx?$/, loader: "ts-loader" },
       { test: /\.json$/i, loader: 'json-loader' },
       // use Bluebird as the global Promise implementation:
       { test: /[\/\\]node_modules[\/\\]bluebird[\/\\].+\.js$/, loader: 'expose-loader?Promise' },
@@ -93,8 +95,6 @@ module.exports = ({production, server, extractCss, coverage} = {}) => ({
     new ModuleDependenciesPlugin({
       'aurelia-testing': [ './compile-spy', './view-spy' ]
     }),
-    new TsConfigPathsPlugin(),
-    new CheckerPlugin(),
     new HtmlWebpackPlugin({
       template: 'index.ejs',
       minify: production ? {
@@ -110,14 +110,8 @@ module.exports = ({production, server, extractCss, coverage} = {}) => ({
       filename: production ? '[contenthash].css' : '[id].css',
       allChunks: true
     })),
-    ...when(production, new CommonsChunkPlugin({
-      name: ['common']
-    })),
     ...when(production, new CopyWebpackPlugin([
-      { from: 'static/favicon.ico', to: 'favicon.ico' }
-    ])),
-    ...when(production, new UglifyJsPlugin({
-      sourceMap: true
-    }))
+      { from: 'static/favicon.ico', to: 'favicon.ico' }])),
+    ...when(analyze, new BundleAnalyzerPlugin())
   ]
 });

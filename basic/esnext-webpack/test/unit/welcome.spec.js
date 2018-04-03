@@ -12,7 +12,12 @@ describe('WelcomeComponent', () => {
     await component.create(bootstrap);
   });
 
-
+  // only jest supports creating snapshot:
+  if (jest) {
+    it('should render correctly', () => {
+      expect(document.body.outerHTML).toMatchSnapshot();
+    });
+  }
 
   it('should render first name', () => {
     const nameElement = document.querySelector('#fn');
