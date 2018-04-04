@@ -12541,11 +12541,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\work\\aurelia-community\\aucs\\code-samples\\full-stack\\typescript-aspnetcore\\back-end\\back-end.csproj",
+      "projectUniqueName": "c:\\work\\longarone\\code-samples\\full-stack\\typescript-aspnetcore\\back-end\\back-end.csproj",
       "projectName": "back-end",
-      "projectPath": "C:\\work\\aurelia-community\\aucs\\code-samples\\full-stack\\typescript-aspnetcore\\back-end\\back-end.csproj",
+      "projectPath": "c:\\work\\longarone\\code-samples\\full-stack\\typescript-aspnetcore\\back-end\\back-end.csproj",
       "packagesPath": "C:\\Users\\nik\\.nuget\\packages\\",
-      "outputPath": "C:\\work\\aurelia-community\\aucs\\code-samples\\full-stack\\typescript-aspnetcore\\back-end\\obj\\",
+      "outputPath": "c:\\work\\longarone\\code-samples\\full-stack\\typescript-aspnetcore\\back-end\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
