@@ -1,6 +1,6 @@
 ### Serverless
 
-Collection of the front end samples from the **[full-stack](https://github.com/longarone/code-samples/tree/master/full-stack)** set, modified to benefit from the **["Serverless computing"](https://en.wikipedia.org/wiki/Serverless_computing)** concept:
+Collection of the several applications (including some from  **[full-stack](https://github.com/longarone/code-samples/tree/master/full-stack)** set, modified to benefit from the **["Serverless computing"](https://en.wikipedia.org/wiki/Serverless_computing)** concept:
 
 > Serverless computing is a cloud computing execution model in which the cloud provider dynamically manages the allocation of machine resources. Pricing is based on the actual amount of resources consumed by an application, rather than on pre-purchased units of capacity. It is a form of utility computing.
 
