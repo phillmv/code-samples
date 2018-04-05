@@ -13,6 +13,7 @@ Unlike the original version, each of these two samples is designed as two indepe
  <br>
 </p>
 
-Starting with these two, well known samples, this section will be augmented to include the ___integration samples___ of interest, including, but not limited to Aurelia-UI_toolkits Bridges ([aurelia kendoui bridge](https://github.com/aurelia-ui-toolkits/aurelia-kendoui-bridge), [aurelia materialize bridge](https://github.com/aurelia-ui-toolkits/aurelia-materialize-bridge) and [aurelia syncfusion bridge](https://github.com/aurelia-ui-toolkits/aurelia-syncfusion-bridge))
+
+Starting with these two, well known samples, this section will be augmented to include the ___distributed architecture samples___ of interest, including, but not limited to Aurelia-UI_toolkits Bridges ([aurelia kendoui bridge](https://github.com/aurelia-ui-toolkits/aurelia-kendoui-bridge), [aurelia materialize bridge](https://github.com/aurelia-ui-toolkits/aurelia-materialize-bridge) and [aurelia syncfusion bridge](https://github.com/aurelia-ui-toolkits/aurelia-syncfusion-bridge))
 
 
