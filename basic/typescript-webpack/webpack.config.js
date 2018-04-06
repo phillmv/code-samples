@@ -90,7 +90,8 @@ module.exports = ({production, server, extractCss, coverage, analyze} = {}) => (
       'Promise': 'bluebird',
       '$': 'jquery',
       'jQuery': 'jquery',
-      'window.jQuery': 'jquery'
+      'window.jQuery': 'jquery',
+      Popper: ['popper.js', 'default'] // Bootstrap 4 Dependency.
     }),
     new ModuleDependenciesPlugin({
       'aurelia-testing': [ './compile-spy', './view-spy' ]
