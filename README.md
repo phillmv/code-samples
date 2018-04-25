@@ -1,4 +1,4 @@
-# Code Samples
+# Code Samplez
 Collection of all carmel samples from 4 categories.
 
 1. **[basic](https://github.com/longarone/code-samples/tree/master/basic)**
