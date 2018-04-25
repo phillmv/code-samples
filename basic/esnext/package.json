@@ -6,7 +6,7 @@
     "type": "???",
     "url": "???"
   },
-  "license": "MIT",
+  "license": "WTFPL",
   "dependencies": {
     "aurelia-animator-css": "^1.0.2",
     "aurelia-bootstrapper": "^2.1.1",
